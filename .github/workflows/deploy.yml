@@ -1,0 +1,54 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build Jekyll
+        run: bundle exec jekyll build
+
+      - name: Install StaticCrypt
+        run: npm install -g staticrypt
+
+      - name: Encrypt site
+        env:
+          STATICRYPT_PASSWORD: ${{ secrets.STATICRYPT_PASSWORD }}
+        run: |
+          find _site -name "*.html" | while IFS= read -r file; do
+            dir=$(dirname "$file")
+            staticrypt "$file" \
+              --password "$STATICRYPT_PASSWORD" \
+              --directory "$dir" \
+              --remember 7 \
+              --template-title "SwissMicros PCB Docs" \
+              --template-instructions "Enter the SwissMicros PCB access password to continue."
+          done
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          cname: ""

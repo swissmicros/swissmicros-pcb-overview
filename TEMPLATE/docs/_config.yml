@@ -1,0 +1,34 @@
+# ── Shared theme ────────────────────────────────────────────────────
+remote_theme: swissmicros/swissmicros-pcb-overview
+plugins:
+  - jekyll-remote-theme
+  - jekyll-sass-converter
+
+# ── Project identity ─────────────────────────────────────────────
+# Fill these in for each project:
+project_name:    "CalcBase X"
+project_slug:    calcbasex
+project_version: "Rev 1.0"
+project_date:    "YYYY-MM-DD"
+project_layers:  null
+project_description: "Short description of this board"
+overview_url: "https://swissmicros.github.io/swissmicros-pcb-overview"
+
+# Files in docs/assets/downloads/ (set to null if not available)
+pdf_schematic:   null   # e.g. "calcbasex_schematics.pdf"
+pdf_3d:          null   # e.g. "calcbasex_3d.pdf"
+bom_file:        null   # e.g. "Bill of Materials-calcbasex.xlsx"
+
+# ── Jekyll settings ──────────────────────────────────────────────
+baseurl: "/swissmicros-pcb-calcbasex"   # change X to the number
+url:     "https://swissmicros.github.io"
+title:   "CalcBase X | SwissMicros PCB"
+
+markdown:    kramdown
+highlighter: rouge
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: project

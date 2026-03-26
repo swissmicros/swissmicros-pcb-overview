@@ -1,0 +1,48 @@
+title: SwissMicros PCB Projects
+description: Internal PCB design documentation for SwissMicros calculator hardware
+url: "https://swissmicros.github.io"
+baseurl: "/swissmicros-pcb-overview"
+
+plugins:
+  - jekyll-sass-converter
+
+markdown: kramdown
+highlighter: rouge
+
+# Overview page project registry
+projects:
+  - name: "CalcBase 2"
+    slug: calcbase2
+    repo: swissmicros-pcb-calcbase2
+    url: "https://swissmicros.github.io/swissmicros-pcb-calcbase2"
+    status: released
+    latest_release: "2026-02-01"
+    description: "DM42-series calculator base board"
+  - name: "CalcBase 3"
+    slug: calcbase3
+    repo: swissmicros-pcb-calcbase3
+    url: "https://swissmicros.github.io/swissmicros-pcb-calcbase3"
+    status: wip
+    latest_release: null
+    description: "Next-generation base board (in development)"
+  - name: "CalcBase 4"
+    slug: calcbase4
+    repo: swissmicros-pcb-calcbase4
+    url: "https://swissmicros.github.io/swissmicros-pcb-calcbase4"
+    status: released
+    latest_release: "2026-03-25"
+    description: "Revised base board with updated components"
+  - name: "CalcBase 5"
+    slug: calcbase5
+    repo: swissmicros-pcb-calcbase5
+    url: "https://swissmicros.github.io/swissmicros-pcb-calcbase5"
+    status: released
+    latest_release: "2026-02-01"
+    description: "Compact base board revision"
+  - name: "CalcBase 6"
+    slug: calcbase6
+    repo: swissmicros-pcb-calcbase6
+    url: "https://swissmicros.github.io/swissmicros-pcb-calcbase6"
+    status: released
+    latest_release: "2026-02-01"
+    description: "Latest base board platform"

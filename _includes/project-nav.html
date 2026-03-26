@@ -1,0 +1,58 @@
+<div class="nav-section">
+  <span class="nav-label">Documentation</span>
+  <ul class="nav-list">
+    <li>
+      <a href="{{ '/index.html' | relative_url }}"
+         {% if page.url == '/' or page.url == '/index.html' %}class="active"{% endif %}>
+        Overview
+      </a>
+    </li>
+    <li>
+      <a href="{{ '/schematics.html' | relative_url }}"
+         {% if page.url contains 'schematics' %}class="active"{% endif %}>
+        Schematics
+      </a>
+    </li>
+    <li>
+      <a href="{{ '/gerber.html' | relative_url }}"
+         {% if page.url contains 'gerber' %}class="active"{% endif %}>
+        Gerber / Fabrication
+      </a>
+    </li>
+    <li>
+      <a href="{{ '/bom.html' | relative_url }}"
+         {% if page.url contains 'bom' %}class="active"{% endif %}>
+        Bill of Materials
+      </a>
+    </li>
+    <li>
+      <a href="{{ '/assembly.html' | relative_url }}"
+         {% if page.url contains 'assembly' %}class="active"{% endif %}>
+        Assembly
+      </a>
+    </li>
+    <li>
+      <a href="{{ '/datasheets.html' | relative_url }}"
+         {% if page.url contains 'datasheets' %}class="active"{% endif %}>
+        Datasheets
+      </a>
+    </li>
+  </ul>
+</div>
+
+{% if site.project_date or site.project_version %}
+<div class="nav-meta">
+  {% if site.project_version %}
+  <div class="meta-row">
+    <span class="meta-key">Version</span>
+    <span class="meta-val">{{ site.project_version }}</span>
+  </div>
+  {% endif %}
+  {% if site.project_date %}
+  <div class="meta-row">
+    <span class="meta-key">Released</span>
+    <span class="meta-val">{{ site.project_date }}</span>
+  </div>
+  {% endif %}
+</div>
+{% endif %}
