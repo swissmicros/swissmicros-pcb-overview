@@ -1,0 +1,121 @@
+<h2 id="downloads">Downloads</h2>
+
+<div class="btn-group">
+  <a class="btn btn-primary" href="/swissmicros-pcb-overview/assets/downloads/gerber.zip">
+    <span class="btn-icon">&#11015;</span> Gerber Files (.zip)
+  </a>
+  <a class="btn btn-secondary" href="/swissmicros-pcb-overview/assets/downloads/nc_drill.zip">
+    <span class="btn-icon">&#11015;</span> NC Drill Files (.zip)
+  </a>
+  <a class="btn btn-secondary" href="/swissmicros-pcb-overview/assets/downloads/odb.zip">
+    <span class="btn-icon">&#11015;</span> ODB++ Package (.zip)
+  </a>
+</div>
+
+<h2 id="layer-stack">Layer Stack</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Layer</th>
+      <th>File Extension</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Top Copper</td>
+      <td><code class="language-plaintext highlighter-rouge">.GTL</code></td>
+      <td>Top signal layer</td>
+    </tr>
+    <tr>
+      <td>Inner 1</td>
+      <td><code class="language-plaintext highlighter-rouge">.G1</code></td>
+      <td>Inner signal/plane</td>
+    </tr>
+    <tr>
+      <td>Inner 2</td>
+      <td><code class="language-plaintext highlighter-rouge">.G2</code></td>
+      <td>Inner signal/plane</td>
+    </tr>
+    <tr>
+      <td>Bottom Copper</td>
+      <td><code class="language-plaintext highlighter-rouge">.GBL</code></td>
+      <td>Bottom signal layer</td>
+    </tr>
+    <tr>
+      <td>Top Soldermask</td>
+      <td><code class="language-plaintext highlighter-rouge">.GTS</code></td>
+      <td>Top solder mask</td>
+    </tr>
+    <tr>
+      <td>Bottom Soldermask</td>
+      <td><code class="language-plaintext highlighter-rouge">.GBS</code></td>
+      <td>Bottom solder mask</td>
+    </tr>
+    <tr>
+      <td>Top Silkscreen</td>
+      <td><code class="language-plaintext highlighter-rouge">.GTO</code></td>
+      <td>Top overlay</td>
+    </tr>
+    <tr>
+      <td>Bottom Silkscreen</td>
+      <td><code class="language-plaintext highlighter-rouge">.GBO</code></td>
+      <td>Bottom overlay</td>
+    </tr>
+    <tr>
+      <td>Top Paste</td>
+      <td><code class="language-plaintext highlighter-rouge">.GTP</code></td>
+      <td>Top solder paste</td>
+    </tr>
+    <tr>
+      <td>Bottom Paste</td>
+      <td><code class="language-plaintext highlighter-rouge">.GPB</code></td>
+      <td>Bottom solder paste</td>
+    </tr>
+    <tr>
+      <td>Board Outline</td>
+      <td><code class="language-plaintext highlighter-rouge">.GKO</code></td>
+      <td>Keep-out / board edge</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="fabrication-notes">Fabrication Notes</h2>
+
+<!-- Add any specific fabrication requirements here -->
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Board thickness</td>
+      <td><!-- 1.6mm --></td>
+    </tr>
+    <tr>
+      <td>Surface finish</td>
+      <td><!-- ENIG / HASL / OSP --></td>
+    </tr>
+    <tr>
+      <td>Min trace width</td>
+      <td><!-- 0.1mm --></td>
+    </tr>
+    <tr>
+      <td>Min via drill</td>
+      <td><!-- 0.2mm --></td>
+    </tr>
+    <tr>
+      <td>Controlled impedance</td>
+      <td><!-- Yes/No --></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="info-box note">
+  Always verify the board outline and layer stack with your PCB manufacturer before ordering.
+</div>
