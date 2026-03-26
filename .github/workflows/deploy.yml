@@ -48,6 +48,7 @@ jobs:
               --password "$STATICRYPT_PASSWORD" \
               --directory "$dir" \
               --remember 7 \
+              --short \
               --template-title "SwissMicros PCB Docs" \
               --template-instructions "Enter the SwissMicros PCB access password to continue."
           done
